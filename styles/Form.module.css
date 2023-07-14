@@ -1,0 +1,363 @@
+
+.input_group{
+    @apply flex ;
+    position: relative;
+    border-bottom: 1px solid #ffffff18;
+ 
+    
+
+   
+}
+
+.input_text{
+    @apply w-full px-2 py-3 bg-black ;
+    @apply text-white border-none focus:outline-none;
+    
+}
+.input_text2{
+    @apply w-full px-2 py-3 bg-black rounded-r-xl;
+    @apply text-white border-none focus:outline-none;
+}
+
+.button {
+    @apply w-full rounded-md ring-2 ring-amber-500 ;
+    @apply py-3 mt-4 text-lg font-medium tracking-wide text-white;
+}
+
+.button:hover{
+    @apply bg-opacity-95 border-amber-300;
+    @apply text-white;
+}
+
+.button_custom{
+    @apply flex justify-center w-full gap-2 py-3 rounded-lg bg-zinc-900/20 hover:bg-gray-200;
+    @apply text-zinc-100 text-lg font-light tracking-wide
+}
+
+.input_text *{
+    color: #CBD5E1;
+}
+.input_text:hover ~ span {
+    color: #eca500;
+}
+
+.input_text:not([type=email]) ~ span:hover{
+    color:#eca500;
+    cursor:pointer;
+}
+.input_text input:valid{
+    color:#26dfae;
+    cursor:pointer;
+}
+
+.input_text input:valid,
+.input_text input:valid
+~ :is(.asterix) {
+    animation:none;
+}
+.input_text 
+:is(input, .asterix) {
+    animation: shake 0.1635s 0s 3;
+}
+
+
+.stickyy {
+    filter: drop-shadow(1px 1px 1px #a5b4fc);
+    background-color: rgb(152 151 151 / 45%); /* Just adjust the color or opacity to make the text pop! */
+    box-shadow: inset 0 0 0 200px rgb(255 255 255 / 10%);
+    border: 1px solid rgba(84, 84, 84, 0.05);
+  
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+.gcclass{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 60px);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
+
+.gc {
+    grid-area: 1 / 5 / 2 / 6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.shadowbox {
+    --box-shadow: 0px 4px 16, rgba(0,0,0,.6);
+     background: #212025;
+}
+
+.sidebar {
+	background-color: var(--sidebar-bg-color);
+	width: var(--sidebar-width);
+	transition: all .3s ease-in-out;
+	transform: translateX(0);
+	z-index: 9999999
+}
+
+.sidebar .close-aside {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	cursor: pointer;
+	color: #EEE;
+}
+
+.sidebar .sidebar-header {
+	border-bottom: 1px solid #2a2b3c
+}
+
+.sidebar .sidebar-header h5 a {
+	color: var(--dk-gray-300)
+}
+
+.sidebar .sidebar-header p {
+	color: var(--dk-gray-400);
+	font-size: .825rem;
+}
+
+.sidebar .search .form-control ~ i {
+	color: #2b2f3a;
+	right: 40px;
+	top: 22px;
+}
+
+.sidebar > ul > li {
+	padding: .7rem 1.75rem;
+}
+
+.sidebar ul > li > a {
+	color: var(--dk-gray-400);
+	text-decoration: none;
+}
+
+/* Start numbers */
+.sidebar ul > li > a > .num {
+	line-height: 0;
+	border-radius: 3px;
+	font-size: 14px;
+	padding: 0px 5px
+}
+
+.sidebar ul > li > i {
+	font-size: 18px;
+	margin-right: .7rem;
+	color: var(--dk-gray-500);
+}
+
+.sidebar ul > li.has-dropdown > a:after {
+	content: '\eb3a';
+	font-family: unicons-line;
+	font-size: 1rem;
+	line-height: 1.8;
+	float: right;
+	color: var(--dk-gray-500);
+	transition: all .3s ease-in-out;
+}
+
+.sidebar ul .opened > a:after {
+	transform: rotate(-90deg);
+}
+
+/* Start dropdown menu */
+.sidebar ul .sidebar-dropdown {
+	padding-top: 10px;
+	padding-left: 30px;
+	display: none;
+}
+.sidebar ul .sidebar-dropdown.active {
+	display: block;
+}
+
+.sidebar ul .sidebar-dropdown > li > a {
+  font-size: .85rem;
+	padding: .5rem 0;
+	display: block;
+}
+/* End dropdown menu */
+
+.show-sidebar {
+	transform: translateX(-270px);
+}
+
+@media (max-width: 767px) {
+	.sidebar ul > li {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	.sidebar .search {
+		padding: 10px 0 10px 30px
+	}
+}
+.sidebar {
+    flex: 1;
+    height: calc(100vh - 50px);
+    background-color: rgb(251, 251, 255);
+    position: sticky;
+    top: 50px;
+  }
+  
+  .sidebarWrapper {
+    padding: 20px;
+    color: #555;
+  }
+  
+  .sidebarMenu {
+    margin-bottom: 10px;
+  }
+  
+  .sidebarTitle {
+    font-size: 13px;
+    color: rgb(187, 186, 186);
+  }
+  
+  .sidebarList {
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .sidebarListItem {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .sidebarListItem.active,
+  .sidebarListItem:hover {
+    background-color: rgb(240, 240, 255);
+  }
+  
+  .sidebarIcon{
+      margin-right: 5px;
+      font-size: 20px !important;
+  }
+  .buttonup {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    }
+    .buttonup:hover {
+    background: #06D85F;
+    }
+    
+    .over1 {
+    position: relative;
+    
+    }
+    
+    .overlayup {
+    position: fixed;
+    top: 2;
+    bottom: 2;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 30;
+    }
+    .overlayup:target {
+    visibility: visible;
+    opacity: 1;
+    }
+    
+    .popupup {
+    margin:200px auto;
+    padding: 2x;
+    z-index: 50;
+    overflow-x: hidden;
+    
+    border: 1px solid black;
+    background: transparent;
+    
+    border-radius: 5px;
+    border-bottom-width: 1px;
+    border-color: rgb(5 5 5 / 0.1);
+    border-color: rgb(64 64 64 / 0.5);
+    width: 50%;
+    height: 36rem;
+    position: relative;
+    backdrop-filter: blur(30px);
+    }
+    .popupup .edge {
+    
+    border-right: 1px solid #212121;
+    position: relative;
+    }
+    
+    
+    .popupup h2 {
+    margin-top: 0;
+    
+    }
+    .popupup .closeup {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #333;
+    }
+    .popupup .closeup:hover {
+    color: #ff0000;
+    }
+    .popupup .contentup {
+    max-height: 30%;
+    overflow: auto;
+    }
+    
+    @media screen and (max-width: 700px){
+    .boxup{
+      width: 70%;
+    }
+    .popupup{
+      width: 85%;
+    }
+    }
+    .centered-label {
+    display: flex;
+    align-items: center;
+    }
+    
+    .glassattempt {
+    width: 30%;
+    position: relative;
+    margin: 70px auto;
+    padding: 20px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+    opacity: 0.2;
+    animation: 1.5s formInAnim cubic-bezier(.03,1.08,.71,.95) forwards;
+    animation-delay: 1s;
+    }
+    @keyframes formInAnim {
+    0% {
+      opacity: .2;
+      top: -700px;
+      backdrop-filter: blur(0px);
+    }
+    
+    100% {
+      opacity: 1;
+      top: 0;
+      backdrop-filter: blur(15px) ;
+    }
+    }
+
+
+
+
